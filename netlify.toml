@@ -20,18 +20,7 @@
     X-XSS-Protection = "1; mode=block"
     # X-Content-Type-Options = "nosniff" # Can add this later if desired
 
-    # Content Security Policy (CSP) - Allow Decap CMS necessities
-    # This allows: default from self, scripts from self/CDN + unsafe-eval,
-    # styles from self/CDN + inline, images from self/data/unsplash/github,
-    # fonts from self/google, connect to self/github api.
+    # Content Security Policy (CSP) - SIMPLIFIED FOR TESTING
     Content-Security-Policy = "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net;"
-      default-src 'self'; \
-      script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; \
-      style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; \
-      img-src 'self' data: https://images.unsplash.com https://*.githubusercontent.com; \
-      font-src 'self' https://fonts.gstatic.com; \
-      connect-src 'self' https://api.github.com; \
-      frame-src 'self'; \
-      object-src 'none'; \
-      base-uri 'self';
-    """
+
+  # --- >>>> MAKE SURE THERE ARE NO OTHER LINES HERE from the old CSP <<< ---
