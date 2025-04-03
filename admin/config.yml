@@ -2,7 +2,8 @@ backend:
   name: github
   repo: jpegjune/jpegjune-website
   branch: main
-  # No base_url, no auth_type
+  base_url: https://jpegjune.com # Add this line back
+  # No auth_type
 
 media_folder: "images/uploads" # Where to store uploaded images
 public_folder: "/images/uploads" # How to access uploaded images
