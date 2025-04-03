@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway # Switch back temporarily for testing
+  name: github
+  repo: jpegjune/jpegjune-website
   branch: main
 
 media_folder: "images/uploads" # Where to store uploaded images
