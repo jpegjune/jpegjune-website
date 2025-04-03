@@ -1,0 +1,81 @@
+{
+    "global": {
+      "copyrightYear": "2025",
+      "brandName": "June",
+      "social": {
+        "instagram": "https://instagram.com",
+        "pinterest": "https://pinterest.com"
+      },
+      "pageBackgroundUrl": "https://i.postimg.cc/FHxGF6ys/Future-Athletic1988.jpg"
+    },
+    "index": {
+      "tagline": "Capturing moments that last forever",
+      "backgroundUrl": "https://i.postimg.cc/FHxGF6ys/Future-Athletic1988.jpg"
+    },
+    "about": {
+      "profileImageUrl": "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+      "quote": "Capturing moments that last forever",
+      "bio": [
+        "June is a photographer specializing in portrait and editorial photography, with a focus on capturing authentic moments that reveal the essence of her subjects.",
+        "With over a decade of experience behind the lens, June has developed a distinct style characterized by its emotional depth and artistic composition. Her work has been featured in various publications including Vogue, Elle, and Harper's Bazaar.",
+        "June's journey in photography began in art school, where she discovered her passion for visual storytelling. Since then, she has traveled extensively, photographing diverse subjects across different cultures and landscapes.",
+        "When not behind the camera, June can be found exploring art galleries, practicing meditation, or searching for the perfect light during golden hour walks through the city.",
+        "She is currently based in New York City and available for commissions worldwide."
+      ]
+    },
+    "contact": {
+      "headline": "Let's Connect",
+      "subHeadline": "Tell me about the moments you want to capture",
+      "services": [
+        "Portraits • Weddings",
+        "Events • Editorial"
+      ],
+      "availability": [
+        "NYC & Worldwide",
+        "Available for Travel"
+      ]
+    },
+    "portfolio": {
+      "headline": "Portfolio",
+      "subHeadline": "Explore my photography collections",
+      "callToAction": "Ready to create something beautiful together?",
+      "categories": [
+        {
+          "title": "Portrait",
+          "description": "Capturing the essence of individuals",
+          "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          "linkUrl": "#"
+        },
+        {
+          "title": "Travel",
+          "description": "Exploring the world through a lens",
+          "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          "linkUrl": "#"
+        },
+        {
+          "title": "Wedding",
+          "description": "Preserving timeless moments of love",
+          "imageUrl": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          "linkUrl": "#"
+        },
+        {
+          "title": "Event",
+          "description": "Documenting special occasions",
+          "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          "linkUrl": "#"
+        },
+        {
+          "title": "Editorial",
+          "description": "Telling stories through images",
+          "imageUrl": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          "linkUrl": "#"
+        },
+        {
+          "title": "Nature",
+          "description": "Capturing the beauty of our world",
+          "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+          "linkUrl": "#"
+        }
+      ]
+    }
+  }
