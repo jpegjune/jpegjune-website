@@ -2,8 +2,7 @@ backend:
   name: github
   repo: jpegjune/jpegjune-website
   branch: main
-  auth_type: implicit # Add this line
-  # Ensure base_url is NOT present or is commented out
+  # No base_url, no auth_type
 
 media_folder: "images/uploads" # Where to store uploaded images
 public_folder: "/images/uploads" # How to access uploaded images
