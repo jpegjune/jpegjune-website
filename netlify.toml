@@ -1,0 +1,11 @@
+# Netlify configuration file
+[build]
+  # No specific build command needed for static files + functions usually
+  # command = "your_build_command"
+  # publish = "your_publish_directory" # e.g., "." if files are at root
+  functions = "netlify/functions" # Directory where functions live
+
+# Optional: Redirects can go here if needed later
+# [[redirects]]
+#  from = "/old-path"
+#  to = "/new-path"

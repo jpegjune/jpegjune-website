@@ -1,32 +1,59 @@
+# Configuration for Decap CMS
+
 backend:
   name: github
-  repo: jpegjune/jpegjune-website
-  branch: main
-  auth_type: pkce # Use PKCE flow
-  # No base_url
+  repo: jpegjune/jpegjune-website # Your repo
+  branch: main # Your branch
+  base_url: https://jpegjune.com # Your site's main URL
+  auth_endpoint: /.netlify/functions/auth # Path to your auth function
+  # No 'auth_type' needed - Decap infers from base_url/auth_endpoint usage
 
-media_folder: "images/uploads" # Where to store uploaded images
-public_folder: "/images/uploads" # How to access uploaded images
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "settings" # Collection identifier
-    label: "Site Settings" # Name in the CMS UI
-    files: # We are editing specific files
-      - label: "Content Data" # Label for the file in UI
-        name: "content" # Internal name reference
-        file: "content.json" # Path to the JSON file
+  # --- Use your FULL collections definition here ---
+  # (The one that worked before the login prompt changed)
+  - name: "settings"
+    label: "Site Content & Settings"
+    files:
+      - label: "Main Content"
+        name: "content"
+        file: "content.json"
         format: "json"
-        fields: # Fields within content.json
-          # --- Testing Global Settings ---
-          - label: "Global Area" # Label for this section
-            name: "global" # Matches the 'global' key in content.json
-            widget: "object" # It contains nested fields
-            fields: # Fields inside the 'global' object
-              - { label: "Brand Name", name: "brandName", widget: "string" }
-              - { label: "Copyright Year", name: "copyrightYear", widget: "string" }
-          # --- Testing Index Settings ---
-          - label: "Home Page Area" # Label for this section
-            name: "index" # Matches the 'index' key in content.json
-            widget: "object"
-            fields: # Fields inside the 'index' object
-              - { label: "Tagline", name: "tagline", widget: "string" }
+        fields:
+          - { label: "Global Settings", name: "global", widget: "object", fields: [
+              { label: "Brand Name", name: "brandName", widget: "string" },
+              { label: "Copyright Year", name: "copyrightYear", widget: "string" },
+              { label: "Default Page Background URL", name: "pageBackgroundUrl", widget: "string" },
+              { label: "Social Links", name: "social", widget: "object", fields: [
+                  { label: "Instagram URL", name: "instagram", widget: "string" },
+                  { label: "Pinterest URL", name: "pinterest", widget: "string" }
+              ]}
+            ]}
+          - { label: "Home Page", name: "index", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Home Background URL", name: "backgroundUrl", widget: "string" }
+            ]}
+          - { label: "About Page", name: "about", widget: "object", fields: [
+              { label: "Profile Image URL", name: "profileImageUrl", widget: "image" },
+              { label: "Quote", name: "quote", widget: "string" },
+              { label: "Biography", name: "bio", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+            ]}
+          - { label: "Contact Page", name: "contact", widget: "object", fields: [
+              { label: "Headline", name: "headline", widget: "string" },
+              { label: "Sub-Headline", name: "subHeadline", widget: "string" },
+              { label: "Services List", name: "services", widget: "list", field: { label: "Service Line", name: "line", widget: "string"} },
+              { label: "Availability List", name: "availability", widget: "list", field: { label: "Availability Line", name: "line", widget: "string"} }
+            ]}
+          - { label: "Portfolio Page", name: "portfolio", widget: "object", fields: [
+              { label: "Headline", name: "headline", widget: "string" },
+              { label: "Sub-Headline", name: "subHeadline", widget: "string" },
+              { label: "Call To Action Text", name: "callToAction", widget: "string" },
+              { label: "Portfolio Categories", name: "categories", widget: "list", fields: [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Description", name: "description", widget: "string" },
+                  { label: "Image", name: "imageUrl", widget: "image" },
+                  { label: "Link URL", name: "linkUrl", widget: "string", required: false, default: "#" }
+              ]}
+            ]}
