@@ -1,0 +1,5 @@
+# Headers applying only to the admin path and its contents
+/admin/*
+  Content-Security-Policy: script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://images.unsplash.com https://*.githubusercontent.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.github.com; frame-src 'self'; object-src 'none'; base-uri 'self'; default-src 'self';
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block

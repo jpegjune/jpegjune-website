@@ -9,18 +9,3 @@
 # [[redirects]]
 #  from = "/old-path"
 #  to = "/new-path"
-
-# --- ADD THE FOLLOWING HEADERS SECTION ---
-[[headers]]
-  # Apply these headers to all pages
-  for = "/*"
-  [headers.values]
-    # Basic security headers (already likely set by Netlify but explicit is ok)
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    # X-Content-Type-Options = "nosniff" # Can add this later if desired
-
-    # Content Security Policy (CSP) - SIMPLIFIED FOR TESTING
-    Content-Security-Policy = "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net;"
-
-  # --- >>>> MAKE SURE THERE ARE NO OTHER LINES HERE from the old CSP <<< ---
