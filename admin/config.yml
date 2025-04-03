@@ -2,8 +2,9 @@
 
 # Backend connection: Connects to GitHub using Netlify Git Gateway for authentication
 backend:
-  name: git-gateway # Uses Netlify Identity and Git Gateway
-  branch: main # Branch to update (make sure this matches your production branch)
+  name: github # Use the GitHub backend INSTEAD of git-gateway
+  repo: jpegjune/jpegjune-website # Your GitHub repo: username/repo-name
+  branch: main # Branch to read/write content
 
 # Media files configuration (where uploaded images will go)
 # We'll store images in the main 'images' folder for simplicity now
