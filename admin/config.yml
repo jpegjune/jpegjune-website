@@ -1,0 +1,64 @@
+# Decap CMS Configuration for June Photography Website
+
+# Backend connection: Connects to GitHub using Netlify Git Gateway for authentication
+backend:
+  name: git-gateway # Uses Netlify Identity and Git Gateway
+  branch: main # Branch to update (make sure this matches your production branch)
+
+# Media files configuration (where uploaded images will go)
+# We'll store images in the main 'images' folder for simplicity now
+media_folder: "images/uploads" # Path where uploaded files will be saved in the repo
+public_folder: "/images/uploads" # Path used in generated URLs for media files
+
+# Content Collections: Defines the editable content structures
+# We are using a single 'file' collection type to edit fields within content.json
+collections:
+  - name: "settings" # A name for this group of settings
+    label: "Site Content & Settings" # Label shown in the CMS UI
+    files: # We are editing specific files, not folders of files
+      - label: "Main Content" # Label for this specific file section in the UI
+        name: "content" # Internal name
+        file: "content.json" # Path to the file we are editing (relative to root)
+        format: "json" # Specify the file format
+        fields: # Define the editable fields within content.json
+          # Global Fields
+          - { label: "Global Settings", name: "global", widget: "object", fields: [
+              { label: "Brand Name", name: "brandName", widget: "string" },
+              { label: "Copyright Year", name: "copyrightYear", widget: "string" },
+              { label: "Default Page Background URL", name: "pageBackgroundUrl", widget: "string" }, # Or use image widget later
+              { label: "Social Links", name: "social", widget: "object", fields: [
+                  { label: "Instagram URL", name: "instagram", widget: "string" },
+                  { label: "Pinterest URL", name: "pinterest", widget: "string" }
+              ]}
+            ]}
+          # Index Page Fields
+          - { label: "Home Page", name: "index", widget: "object", fields: [
+              { label: "Tagline", name: "tagline", widget: "string" },
+              { label: "Home Background URL", name: "backgroundUrl", widget: "string" } # Or use image widget later
+            ]}
+          # About Page Fields
+          - { label: "About Page", name: "about", widget: "object", fields: [
+              { label: "Profile Image URL", name: "profileImageUrl", widget: "image" }, # Using image widget
+              { label: "Quote", name: "quote", widget: "string" },
+              { label: "Biography", name: "bio", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } } # List of text areas
+            ]}
+          # Contact Page Fields
+          - { label: "Contact Page", name: "contact", widget: "object", fields: [
+              { label: "Headline", name: "headline", widget: "string" },
+              { label: "Sub-Headline", name: "subHeadline", widget: "string" },
+              { label: "Services List", name: "services", widget: "list", field: { label: "Service Line", name: "line", widget: "string"} },
+              { label: "Availability List", name: "availability", widget: "list", field: { label: "Availability Line", name: "line", widget: "string"} }
+            ]}
+          # Portfolio Page Fields
+          - { label: "Portfolio Page", name: "portfolio", widget: "object", fields: [
+              { label: "Headline", name: "headline", widget: "string" },
+              { label: "Sub-Headline", name: "subHeadline", widget: "string" },
+              { label: "Call To Action Text", name: "callToAction", widget: "string" },
+              # Portfolio Categories List
+              { label: "Portfolio Categories", name: "categories", widget: "list", fields: [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Description", name: "description", widget: "string" },
+                  { label: "Image", name: "imageUrl", widget: "image" }, # Image upload widget
+                  { label: "Link URL", name: "linkUrl", widget: "string", required: false, default: "#" }
+              ]}
+            ]}
