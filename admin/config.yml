@@ -2,7 +2,7 @@ backend:
   name: github
   repo: jpegjune/jpegjune-website
   branch: main
-  base_url: https://jpegjune.com # Add this line
+  # base_url line removed
 
 media_folder: "images/uploads" # Where to store uploaded images
 public_folder: "/images/uploads" # How to access uploaded images
