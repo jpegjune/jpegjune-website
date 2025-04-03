@@ -24,7 +24,7 @@
     # This allows: default from self, scripts from self/CDN + unsafe-eval,
     # styles from self/CDN + inline, images from self/data/unsplash/github,
     # fonts from self/google, connect to self/github api.
-    Content-Security-Policy = """
+    Content-Security-Policy = "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net;"
       default-src 'self'; \
       script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; \
       style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; \
